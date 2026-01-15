@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: DockerApp
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/app_db
+    username: app_user
+    password: app_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  flyway:
+    enabled: false
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+
